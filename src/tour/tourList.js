@@ -16,7 +16,7 @@ const TourList = () => {
             // 에러가 없다면 try안에 코드 실행
             // 에러가 있다면 catch값으로 넘어감
             try {
-                const response = await axios.get(`https://apis.data.go.kr/6260000/AttractionService/getAttractionKr?serviceKey=${key}&numOfRows=10&pageNo=1&resultType=json`)
+                const response = await axios.get(`http://apis.data.go.kr/6260000/AttractionService/getAttractionKr?serviceKey=${key}&numOfRows=10&pageNo=1&resultType=json`)
                 setTour(response.data.getAttractionKr.item)
             } catch(error) {
                 console.log(error)
@@ -28,9 +28,16 @@ const TourList = () => {
 
     return (
         <div className="list">
-            <div className="inner">
-                <h3>부 산 명 소</h3>
-            </div> {/* .inner end */}
+            <div className="list_rec">
+                <div className="item_rec">부</div>
+                <div className="item_rec"><figure><img src="img/seagull.png" alt="갈매기" /></figure></div>
+                <div className="item_rec">산</div>
+                <div className="item_rec"></div>
+                <div className="item_rec"></div>
+                <div className="item_rec">명</div>
+                <div className="item_rec"><figure><img src="img/beach.png" alt="해변" /></figure></div>
+                <div className="item_rec">소</div>
+            </div> {/* .list_rec end */}
 
             <div className="main_list">
                 {tour.map((tourMap) => (

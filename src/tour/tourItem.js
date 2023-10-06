@@ -21,12 +21,10 @@ const TourItem = ({article}) => {
                 <figure><img src={MAIN_IMG_NORMAL} alt={MAIN_TITLE} /></figure>
 
                 <div className="text">
-                    <p>{TITLE}</p>
-                    <div className="bottom">
-                        <p>{ADDR1}</p>
-                        {/* noreferrer : 해당페이지로 넘어가기 위해 http에게 요청함 */}
-                        {HOMEPAGE_URL && <a href={HOMEPAGE_URL} target="_blank" rel="noreferrer">홈페이지</a> }
-                    </div> {/* .bottom end */}
+                    <h5>{TITLE}</h5>
+                    <p>{ADDR1}</p>
+                    {/* noreferrer : 해당페이지로 넘어가기 위해 http에게 요청함 */}
+                    {HOMEPAGE_URL && <a href={HOMEPAGE_URL} target="_blank" rel="noreferrer">홈페이지</a> }
                 </div> {/* .text end */}
 
             </div>{/* .inner end */}
