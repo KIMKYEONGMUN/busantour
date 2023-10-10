@@ -53,6 +53,7 @@ header {
   top: 0;
   left: 50%;
   transform: translateX(-50%);
+  z-index: 1;
 }
 header .inner {
   display: flex;
@@ -78,6 +79,46 @@ header .inner figure img {
   height: 100%;
   object-fit: 100%;
 }
+
+
+
+
+
+nav {
+  max-width: 767px;
+  width: 100%;
+  height: 100vh;
+  padding-top: 120px;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(10px);
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  display: none;
+}
+nav.on {
+  display: block;
+}
+nav figure {
+  height: 26px;
+  cursor: pointer;
+  position: absolute;
+  top: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+nav figure img {
+  height: 100%;
+  object-fit: 100%;
+}
+nav ul li {
+  font-size: 24px;
+  padding: 40px 0;
+}
+
 
 
 
@@ -151,11 +192,11 @@ header .inner figure img {
 }
 .item .inner .title {
   display: flex;
-  justify-content: left;
+  justify-content: space-between;
   align-items: center;
   margin-bottom: 20px;
 }
-.item .inner .title span {
+.item .inner .title > span {
   display: block;
   padding: 5px 10px;
   background-color: #ff6347;
@@ -164,9 +205,31 @@ header .inner figure img {
   border-radius: 20px;
   margin-right: 20px;
 }
-.item .inner .title h4 {
+.item .inner .title .my {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  cursor: pointer;
+}
+.item .inner .title .my span {
+  color: #ff6347;
+}
+.item .inner .title .my svg.line {
+  display: block;
+}
+.item.on .inner .title .my svg.line {
+  display: none;
+}
+.item .inner .title .my svg.fill {
+  display: none;
+}
+.item.on .inner .title .my svg.fill {
+  display: block;
+}
+.item .inner h4 {
   font-size: 24px;
   color: #00008b;
+  margin-bottom: 20px;
 }
 .item .inner > figure {
   width: 100%;
@@ -251,13 +314,6 @@ footer .inner ul li:nth-child(3) {
 
   .item {
     padding: 50px 0;
-  }
-  .item .inner .title {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  .item .inner .title span {
-    margin-bottom: 10px;
   }
   .item .inner > figure {
     height: 260px;
