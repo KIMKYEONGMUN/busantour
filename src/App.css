@@ -217,14 +217,8 @@ nav ul li {
 .item .inner .title .my svg.line {
   display: block;
 }
-.item.on .inner .title .my svg.line {
-  display: none;
-}
 .item .inner .title .my svg.fill {
   display: none;
-}
-.item.on .inner .title .my svg.fill {
-  display: block;
 }
 .item .inner h4 {
   font-size: 24px;
