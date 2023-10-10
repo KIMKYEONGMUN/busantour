@@ -10,6 +10,33 @@ const TourItem = ({article}) => {
         ADDR1 /* 주소 */
     } = article;
 
+
+    let my = document.querySelectorAll('.my');
+    let line = document.querySelectorAll('.line');
+    let fill = document.querySelectorAll('.fill');
+
+    for (let i = 0; i < my.length; i++) {
+        // my[i].onclick = function(){
+        //     if (line[i].style.display === 'block') {
+        //       line[i].style.display = 'none';
+        //       fill[i].style.display = 'block';
+        //     } else {
+        //       line[i].style.display = 'block';
+        //       fill[i].style.display = 'none';
+        //     };
+        //   };
+        my[i].onclick = function(){
+            if (line[i].style.display === 'none') {
+              line[i].style.display = 'block';
+              fill[i].style.display = 'none';
+            } else {
+              line[i].style.display = 'none';
+              fill[i].style.display = 'block';
+            };
+          };
+    };
+    
+    
     return (
         <div className="item">
             <div className="inner">
