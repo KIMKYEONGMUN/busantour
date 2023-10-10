@@ -298,7 +298,7 @@ footer .inner ul li {
   width: calc(100% / 4);
   text-align: center;
 }
-footer .inner ul li:nth-child(3) {
+.memo {
   color: #ff6347;
 }
 
