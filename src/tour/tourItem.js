@@ -14,9 +14,9 @@ const TourItem = ({article}) => {
     let line = document.querySelectorAll('.line');
     let fill = document.querySelectorAll('.fill');
     
-    line.forEach(reset => {
-        reset.style.display = 'block';
-    });
+    // line.forEach(reset => {
+    //     reset.style.display = 'block';
+    // });
 
     const myClick = () => {
         for (let i = 0; i < my.length; i++) {
@@ -32,7 +32,7 @@ const TourItem = ({article}) => {
         };
     };
     
-    // myClick();
+    myClick();
 
     return (
         <div className="item">
