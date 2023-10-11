@@ -32,7 +32,7 @@ const TourItem = ({article}) => {
         };
     };
     
-    myClick();
+    // myClick();
 
     return (
         <div className="item">
