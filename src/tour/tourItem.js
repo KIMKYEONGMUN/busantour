@@ -9,16 +9,16 @@ const TourItem = ({article}) => {
         MAIN_IMG_NORMAL, /* 이미지 URL */
         ADDR1 /* 주소 */
     } = article;
-
-    let my = document.querySelectorAll('.my');
-    let line = document.querySelectorAll('.line');
-    let fill = document.querySelectorAll('.fill');
+    
     
     // line.forEach(reset => {
     //     reset.style.display = 'block';
     // });
 
     const myClick = () => {
+        let my = document.querySelectorAll('.my');
+        let line = document.querySelectorAll('.line');
+        let fill = document.querySelectorAll('.fill');
         for (let i = 0; i < my.length; i++) {
             my[i].onclick = () => {
                 // if (line[i].style.display === 'block') {
